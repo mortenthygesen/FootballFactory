@@ -1,18 +1,16 @@
-var gulp = require('gulp')
-    , nodemon = require('gulp-nodemon')
-    , jshint = require('gulp-jshint')
+var gulp   = require( 'gulp' ),
+    server = require( 'gulp-develop-server' );
 
-gulp.task('lint', function () {
-  gulp.src('./**/*.js')
-      .pipe(jshint())
-})
+// run server
+gulp.task( 'server:start', function() {
+    server.listen( { path: './server.js' } );
+});
 
-gulp.task('develop', function () {
-  nodemon({ script: 'server.js'
-    , ext: 'html js'
-    , ignore: ['ignored.js']
-    , tasks: ['lint'] })
-      .on('restart', function () {
-        console.log('restarted!')
-      })
-})
+// restart server if app.js changed
+gulp.task( 'server:restart', function() {
+    gulp.watch( [ './server.js' ], server.restart );
+});
+
+gulp.task( 'default', [ 'server:start','server:restart' ], function() {
+    console.log("Server restarted");
+});
