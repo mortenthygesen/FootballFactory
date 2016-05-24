@@ -1,0 +1,17 @@
+{
+  "name": "footballfactory",
+  "version": "1.0.0",
+  "description": "Football Club Stats",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Morten Thygesen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "gulp": "^3.9.1",
+    "jquery": "^2.2.4",
+    "mongodb": "^2.1.19"
+  }
+}
