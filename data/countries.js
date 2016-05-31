@@ -48,7 +48,7 @@
             }
 
         })
-    }
+    };
 
     data.insertCountry = function (country, callback) {
         database.getDb(function (err, db) {
@@ -65,7 +65,7 @@
                 })
             }
         })
-    }
+    };
 
 
     function seedDatabase() {

@@ -30,10 +30,10 @@
 
         writerStream.on("finish", function () {
             console.log("Finished writing to stream!");
-        })
+        });
         writerStream.on("error", function (err) {
             console.log("Writing to stream error: "+ err.stack);
-        })
+        });
 
         console.log("Writing to stream ended");
 

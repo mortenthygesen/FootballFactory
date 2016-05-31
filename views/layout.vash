@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Football Factory</title>
+        <link href="/libs/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+        <link href="/styles/site.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="well" id="well">
+                Hello. It's me calling you again
+            </div>
+        </div>
+
+        <!-- scripts -->
+                <script src="/libs/jquery/dist/jquery.js"></script>
+                <script src="/libs/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="/libs/react/react.js"></script>
+                <script src="/libs/react/react-dom.js"></script>
+                <script src="/libs/babel/browser.js"></script>
+                <script src="/scripts/heyWorld.js" type="text/babel"></script>
+    </body>
+</html>

@@ -16,5 +16,10 @@
                 res.send(results);
             });
         });
+
+        app.get("/message/", function (req,res) {
+                res.set("Content-Type", "application/json");
+                res.send({ msg: "Hello, it's me. I was wondering if after all these years you'd like to meet "});
+        });
     }
 })(module.exports);

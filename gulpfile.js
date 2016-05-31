@@ -21,22 +21,22 @@ gulp.task( 'default', [ 'server:start','server:restart' ], function() {
 // Server Restart implementation 2
 var gulp = require('gulp')
     , nodemon = require('gulp-nodemon')
-    , jshint = require('gulp-jshint')
+    , jshint = require('gulp-jshint');
 
 gulp.task('lint', function () {
     gulp.src('./*.js')
         .pipe(jshint())
-})
+});
 
 gulp.task('develop', function () {
     nodemon({ script: 'server.js'
-        , ext: 'html js'
+        , ext: 'html js vash'
         , ignore: ['ignored.js']
         , tasks: ['lint'] })
         .on('restart', function () {
             console.log('restarted!')
         })
-})
+});
 
 gulp.task( 'default', [ 'develop' ], function() {
     console.log("Server restarted");
